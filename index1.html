@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muskan, Will You Be My Valentine?</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        text-align: center;
+        background: linear-gradient(135deg, #ff758c, #ff7eb3);
+        font-family: "Arial", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      .container {
+        max-width: 100%;
+        padding: 16px;
+      }
+      h1 {
+        font-size: 2em;
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .proposal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+      }
+      .character {
+        width: 100px;
+        height: 140px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 15px;
+      }
+      .guy {
+        background-image: url("https://lh3.googleusercontent.com/d/1UzdUu8DG0tasc-PR27e8kEzU7oEQS2OM=w500");
+        animation: kneelDown 2s ease-in-out infinite alternate;
+      }
+      .girl {
+        background-image: url("https://lh3.googleusercontent.com/d/1V2_z3nxxkoB_PZBAzqo6Wxia0x9niOcs=w500");
+      }
+      .dog {
+        width: 90px;
+        height: 130px;
+        background-image: url("https://lh3.googleusercontent.com/d/1UtDVCP62V0aPKI4aAo32XO1eWDAZcJRN=w500");
+        animation: puppyEyes 2s infinite alternate;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .dog-text {
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(255, 255, 255, 0.8);
+        padding: 3px 5px;
+        border-radius: 10px;
+        font-size: 9px;
+        font-weight: bold;
+        width: 80px;
+        text-align: center;
+        animation: textBounce 1.5s infinite alternate;
+      }
+      @keyframes kneelDown {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(20px);
+        }
+      }
+      @keyframes puppyEyes {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(1.1);
+        }
+      }
+      @keyframes textBounce {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-5px);
+        }
+      }
+      .buttons {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+      button {
+        padding: 12px 25px;
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      #yesBtn {
+        background-color: #4caf50;
+        color: white;
+      }
+      #noBtn {
+        background-color: #f44336;
+        color: white;
+      }
+      .celebration {
+        background: url("https://lh3.googleusercontent.com/d/1V6OfCo963kLUdmRYaL5R45l-y7DaSQLv=w1000")
+          no-repeat center;
+        background-size: cover;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+      p {
+        padding: 0 10px;
+        font-family: cursive; /* Change font */
+        font-size: 22px; /* Increase text size */
+        color: #fff; /* Change text color */
+        text-align: center;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+        margin-top: 10px;
+        animation: fadeIn 0.7s ease-in-out;
+      }
+
+      /* Add a fade-in animation for better effect */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: scale(0.9);
+        }
+        to {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Muskan, Will You Be My Valentine?</h1>
+      <div class="proposal">
+        <div class="character guy"></div>
+        <div class="character dog">
+          <span class="dog-text">Mujhe pizza dedoo pleasee 🍕🥺</span>
+        </div>
+        <div class="character girl"></div>
+      </div>
+      <div class="buttons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+      </div>
+    </div>
+    <script>
+      document.getElementById("yesBtn").addEventListener("click", function () {
+        document.body.innerHTML = `
+                <div class="celebration">
+                    <p >Wohooo I knew you'd say yes!❤️</p>
+                    <p>I loveee Youuuuu Sooo Muchhh Bandarr🎉</p>
+                </div>
+            `;
+      });
+
+      document.getElementById("noBtn").addEventListener("click", function () {
+        document.body.innerHTML = `
+                <div class="celebration">
+                    <p>You had no choice baby,</p>
+                    <p>I'll pick you up anyways!</p>
+                    <p>Letssss goooooooo!</p>
+                </div>
+            `;
+      });
+    </script>
+  </body>
+</html>
